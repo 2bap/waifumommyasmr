@@ -50,7 +50,8 @@ async function fetchWaifu() {
 	await fetch(`https://api.waifu.pics/sfw/${category}`)
 		.then(response => response.json())
 		.then(quote =>  {
-			randomImage.src = quote.url
+			randomImage.src = data.url;
+            randomImage.draggable = false;
 	})
 }
 
@@ -59,7 +60,8 @@ async function fetchWaifuNsfw() {
 	await fetch(`https://api.waifu.pics/nsfw/${category}`)
 		.then(response => response.json())
 		.then(quote =>  {
-			randomImage.src = quote.url
+			randomImage.src = data.url;
+            randomImage.draggable = false;
 	})
 }
 
